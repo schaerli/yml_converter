@@ -25,6 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'slim'
 gem "twitter-bootstrap-rails"
 gem 'carrierwave'
+gem 'font-awesome-rails', '~> 4.4'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

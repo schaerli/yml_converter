@@ -1,14 +1,37 @@
 <!DOCTYPE html>
+<html lang="en">
+
 <html>
 <head>
   <title>YmlConverter</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
 
-<%= yield %>
+<body>
+  <div id="headerwrap">
+      <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-lg-offset-3">
+          <h1>YAML Converter</h1>
+<!--           <h4>YAML Converter</h4>
+          <h4>WEB DESIGNER, DEVELOPER & GAME ADDICT</h4>
+ -->
+        </div>
+      </div>
+      </div> <!-- /container -->
+  <div id="content">
+  <%= yield %>
+  </div>
+
+  </div> <!-- /headerwrap -->
+
 
 </body>
 </html>
