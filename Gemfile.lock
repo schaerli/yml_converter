@@ -135,6 +135,10 @@ GEM
     roo (2.2.0)
       nokogiri (~> 1)
       rubyzip (~> 1.1, < 2.0.0)
+    roo-xls (1.0.0)
+      nokogiri
+      roo (>= 2.0.0beta1, < 3)
+      spreadsheet (> 0.9.0)
     ruby-ole (1.2.11.8)
     rubyzip (1.1.7)
     sass (3.4.17)
@@ -205,6 +209,7 @@ DEPENDENCIES
   jquery-ui-themes (~> 0.0.11)
   pry
   rails (= 4.2.4)
+  roo-xls (~> 1.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   slim

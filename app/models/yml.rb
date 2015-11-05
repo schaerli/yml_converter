@@ -28,12 +28,7 @@ class Yml
 
     i = 0
     export.each do |key, value|
-      puts "*"*100
-      puts "Key: #{key}; Value: #{value}"
-      puts "*"*100
-
       sheet1.row(i+1).push key, value
-
       i += 1
     end
 
