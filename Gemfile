@@ -17,7 +17,6 @@ gem 'coffee-rails', '~> 4.1.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
-gem 'jquery-fileupload-rails', '~> 0.4.6'
 gem 'jquery-ui-themes', '~> 0.0.11'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
@@ -31,6 +30,7 @@ gem 'carrierwave'
 gem 'font-awesome-rails', '~> 4.4'
 gem 'tabledata', '~> 0.0.3'
 gem 'roo-xls', '~> 1.0'
+gem 'pg'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -45,6 +45,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'pry'
+  gem 'pry-rails'
   gem 'awesome_print'
 end
 

@@ -1,7 +1,19 @@
 require 'tabledata'
 require 'spreadsheet'
 
-class Yml
+class Yml < ActiveRecord::Base
+  self.table_name = :ymls
+
+  mount_uploader :yml, YmlUploader
+
+  def to_jq_upload
+    {
+      "name" => read_attribute(:yml_name),
+      "size" => yml.size,
+      "url" => yml.url,
+    }
+  end
+
   
   def self.create_from_xls(file)
     yml                 = ::YAML.load(File.open(file))
