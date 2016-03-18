@@ -31,6 +31,8 @@ gem 'font-awesome-rails', '~> 4.4'
 gem 'tabledata', '~> 0.0.3'
 gem 'roo-xls', '~> 1.0'
 gem 'pg'
+gem 'therubyracer'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
