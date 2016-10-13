@@ -12,6 +12,6 @@
  *
  *= require_self
  *= require_tree .
- *= require jquery-ui
- *= require jquery-ui/dark-hive
+ *= require bootstrap_and_overrides
+ *= require bootstrap-fileinput
  */

@@ -9,6 +9,11 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
+gem "less-rails"
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-bootstrap-fileinput'
+end
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -23,6 +28,7 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'slim'
+gem 'slim-rails'
 gem "twitter-bootstrap-rails"
 gem 'carrierwave'
 gem 'font-awesome-rails', '~> 4.4'
