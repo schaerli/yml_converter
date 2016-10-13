@@ -4,15 +4,9 @@ require 'spreadsheet'
 class Yml < ActiveRecord::Base
   self.table_name = :ymls
 
-  mount_uploader :yml, YmlUploader
+  belongs_to :order
 
-  def to_jq_upload
-    {
-      "name" => read_attribute(:yml_name),
-      "size" => yml.size,
-      "url" => yml.url,
-    }
-  end
+  mount_uploader :yml, YmlUploader
 
   
   def self.create_from_xls(file)

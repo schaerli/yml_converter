@@ -3,7 +3,7 @@ require 'yaml'
 require 'roo'
 require 'tempfile'
 
-class Xls
+class Xlsx
   
   def self.create_from_yml(file)
     @translations = {}

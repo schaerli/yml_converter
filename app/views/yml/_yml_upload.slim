@@ -1,2 +1,18 @@
-label.control-label Select File
-input#input-2.file data-show-caption="true" data-show-upload="false" multiple="multiple" name="input2[]" type="file" /
+input#input-700.file-loading multiple="multiple" name="order[ymls]" type="file"
+
+/ = form_for @ymlorder do |order_form|
+/   = order_form.fields_for :ymls do |yml_fields|
+/     = yml_fields.file_field :yml, class: "file-loading", id: "input-700", multiple: "multiple"
+
+#hidden_data_yml.hidden data-ymlpath="#{orders_path(method: :post)}" data-ymlorderobjectid="#{@ymlorder.object_id}"
+
+javascript:
+  $("#input-700").fileinput({
+    uploadUrl: $("#hidden_data_yml").data("ymlpath"), // server upload action
+    uploadAsync: true,
+    maxFileCount: 100,
+    uploadExtraData: {
+    order_uniq_id:   $("#hidden_data_yml").data("ymlorderobjectid"),
+    }    
+
+  });
