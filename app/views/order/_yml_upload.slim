@@ -4,5 +4,5 @@ input#input-700.file-loading multiple="multiple" name="order[ymls]" type="file"
 /   = order_form.fields_for :ymls do |yml_fields|
 /     = yml_fields.file_field :yml, class: "file-loading", id: "input-700", multiple: "multiple"
 
-#hidden_data_yml.hidden data-ymlpath="#{order_ymls_path(order_id: "__REPLACE__", method: :post)}" data-ymlorderpath="#{orders_path(method: :post)}"
+#hidden_data_yml.hidden data-ymlpath="#{yml_index_path(method: :post)}" data-ymlorderpath="#{orders_path(method: :post)}"
 
