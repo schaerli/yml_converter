@@ -4,8 +4,14 @@ class YmlController < ApplicationController
   def create
     @order.ymls.build(yml: ymlorder_params)
 
+    if params[:count_files].to_i == (params[:file_id].to_i - 1 )
+      binding.pry
+      @order.create_xlsx_from_ymls
+    end
+
     if @order.save
       respond_to do |format|
+
         format.json { render json: {initialPreview: []}}
       end
     else

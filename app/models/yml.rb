@@ -7,9 +7,8 @@ class Yml < ActiveRecord::Base
   belongs_to :order
 
   mount_uploader :yml, YmlUploader
-
   
-  def self.create_from_xls(file)
+  def self.create_from_yml(file)
     yml                 = ::YAML.load(File.open(file))
     @locale             = yml.keys[0]
     hash_without_locale = yml.values[0]
@@ -18,6 +17,17 @@ class Yml < ActiveRecord::Base
 
     export_in_xls(xls)
   end
+
+  def self.import_from_more_yaml(files)
+    xls = {}
+    files.each do |f|   
+      yml = ::YAML.load(File.open(f))
+      hash_without_locale = yml.values[0]
+      xls.merge!(rebuild_(hash_without_locale))
+      end
+    
+    export_in_xls(xls)
+  end  
 
   def self.export_in_xls(export)
     sheet_name                   = @locale
@@ -81,4 +91,5 @@ class Yml < ActiveRecord::Base
       end
     end
   end
+
 end

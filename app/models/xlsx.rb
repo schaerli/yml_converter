@@ -5,7 +5,7 @@ require 'tempfile'
 
 class Xlsx
   
-  def self.create_from_yml(file)
+  def self.create_from_xls(file)
     @translations = {}
       
     xls_file = ::Roo::Excel.new(file)

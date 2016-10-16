@@ -21,7 +21,7 @@ $(function() {
     allowedFileExtensions: ['yml', 'yaml'],
     maxFileCount: 100,
     uploadExtraData: function() {
-      return {"order_id":  $("#hidden_data_yml").data("orderid")}
+      return {"order_id":  $("#hidden_data_yml").data("orderid"), "count_files": $("#input-700").fileinput('getFileStack').length}
     }
       
   })
