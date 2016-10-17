@@ -16,5 +16,22 @@ html lang="en"
         .row
           .col-lg-6.col-lg-offset-3
             h1 YAML Converter
+      nav.navbar.navbar-inverse
+        .contrainer-fluid
+          .navbar-header
+            button.navbar-toggle.collapsed type="button" data-toggle="collapse" data-target="#navi" aria-expanded="false"
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+            a.navbar-brand href="http://daniderb.ch"
+              = image_tag "SD_Logo.png", size: "60x40"
+
+          #navi.navbar-collapse.collapse
+            ul.nav.navbar-nav
+            li.active
+              a href="#" YML2XLS
+                span.sr-only
+
       #content
         = yield
