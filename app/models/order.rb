@@ -5,8 +5,8 @@ class Order < ActiveRecord::Base
 	# has_many :xlsxs
 
   def create_xlsx_from_ymls
-    binding.pry
-    Yml.import_from_more_yaml(self.ymls)
+    files = self.ymls.map(&:yml).map(&:file).map(&:path)
+    Yml.import_from_more_yaml( files )
   end
 
 end

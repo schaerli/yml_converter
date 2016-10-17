@@ -25,4 +25,12 @@ $(function() {
     }
       
   })
+
+
+  $("#input-700").on('filebatchuploadcomplete', function(event, files, extra) {
+      Turbolinks.clearCache() 
+      Turbolinks.visit(window.location.origin + "/yml/" + extra.order_id.toString() + ".xls")
+      console.log('File batch upload success');
+  });
+ 
 })

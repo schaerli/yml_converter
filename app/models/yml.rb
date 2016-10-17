@@ -20,11 +20,15 @@ class Yml < ActiveRecord::Base
 
   def self.import_from_more_yaml(files)
     xls = {}
-    files.each do |f|   
-      yml = ::YAML.load(File.open(f))
+    files.each do |f|
+      yml                 = ::YAML.load( File.open(f) )
+      @locale             = yml.keys[0]
       hash_without_locale = yml.values[0]
-      xls.merge!(rebuild_(hash_without_locale))
+
+      if @locale === "de-CH"
+        xls.merge!( rebuild_(hash_without_locale) )
       end
+    end
     
     export_in_xls(xls)
   end  
@@ -48,7 +52,13 @@ class Yml < ActiveRecord::Base
       i += 1
     end
 
-    book.write "i18n-unstranslated-#{Time.zone.now.day}-#{Time.zone.now.month}-#{Time.zone.now.year}.xls"
+    # binding.pry
+    buffer = StringIO.new
+    book.write(buffer)
+    buffer.rewind
+
+    buffer
+    # book.write "i18n-unstranslated-#{Time.zone.now.day}-#{Time.zone.now.month}-#{Time.zone.now.year}.xls"
   end
   
   def self.rebuild_(hash)
