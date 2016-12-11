@@ -5,9 +5,8 @@
 // the compiled file.
 //
 //= require jquery
-//= require jquery.turbolinks
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require bootstrap-fileinput
 //= require_tree .
-//= require turbolinks
+//= require yml

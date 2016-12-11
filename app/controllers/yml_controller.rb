@@ -38,7 +38,7 @@ class YmlController < ApplicationController
     xls_string = @order.create_xlsx_from_ymls
 
     respond_to do |format|
-      format.xls { send_data xls_string.read, filename: "foo.xls", type: "application/vnd.ms-excel"}
+      format.xls { send_data xls_string.read, filename: "yml_converter.xls", type: "application/vnd.ms-excel"}
     end
   end
 

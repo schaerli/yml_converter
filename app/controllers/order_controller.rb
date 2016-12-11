@@ -4,7 +4,11 @@ class OrderController < ApplicationController
   end
 
   def create
-    order = Order.new(order_type: 'yml')
+    if params.include?("type")
+      order = Order.new(order_type: 'xls')
+    else
+      order = Order.new(order_type: 'yml')
+    end
 
     if order.save
       respond_to do |format|

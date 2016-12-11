@@ -3,12 +3,18 @@ require 'yaml'
 require 'roo'
 require 'tempfile'
 
-class Xlsx
+class Xlsx < ActiveRecord::Base
+  self.table_name = :xlsxs
+
+  belongs_to :order
+
+  mount_uploader :xls, YmlUploader
+
   
   def self.create_from_xls(file)
     @translations = {}
       
-    xls_file = ::Roo::Excel.new(file)
+    xls_file = ::Roo::Excel.new(file.first)
   
     tmp_file = Tempfile.new('foo')
     tmp_file.write(xls_file.to_csv)
@@ -26,6 +32,12 @@ class Xlsx
     end
 
     File.write("translated.yml", @translations.to_yaml, encoding: 'utf-8')
+
+    buffer = StringIO.new
+    buffer << @translations.to_yaml
+    buffer.rewind
+
+    buffer
   end
 
   def self.translation_hash(key_segments)

@@ -13,7 +13,8 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   resources :yml
-  resources :orders, controller: 'order' do 
+  resources :xls
+  resources :orders, controller: 'order' do
     resources :ymls, controller: 'order/yml'
     collection do 
       post 'create_order'
