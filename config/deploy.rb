@@ -3,7 +3,7 @@ lock '3.6.1'
 
 set :application, 'yml2xls'
 set :scm, :git
-set :repo_url, 'git-user@daniderb.ch/home/git-user/apps/yml_converter.git'
+set :repo_url, 'git-user@daniderb.ch:/home/git-user/apps/yml_converter.git'
 
 # Default branch is :master
 ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp

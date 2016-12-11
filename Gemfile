@@ -34,6 +34,7 @@ gem 'tabledata', '~> 0.0.3'
 gem 'roo-xls', '~> 1.0'
 gem 'pg'
 gem 'therubyracer'
+gem 'unicorn'
 
 
 # Use ActiveModel has_secure_password
