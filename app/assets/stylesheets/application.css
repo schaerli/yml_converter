@@ -13,7 +13,7 @@
  *= require_self
  *= require_tree .
  *= require instant/style
- *= require instant/custom
+ *= require custom
  *= require bootstrap_and_overrides
  *= require bootstrap-fileinput
  */
