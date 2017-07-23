@@ -12,9 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20161211145108) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "orders", force: :cascade do |t|
     t.string   "order_type"
     t.datetime "created_at", null: false
@@ -29,8 +26,10 @@ ActiveRecord::Schema.define(version: 20161211145108) do
   end
 
   create_table "ymls", force: :cascade do |t|
-    t.integer "order_id"
-    t.string  "yml"
+    t.integer  "order_id"
+    t.string   "yml"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
