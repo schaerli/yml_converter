@@ -28,6 +28,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'slim'
 gem 'slim-rails'
 gem "twitter-bootstrap-rails"
+gem 'json'
 gem 'carrierwave'
 gem 'font-awesome-rails', '~> 4.4'
 gem 'tabledata', '~> 0.0.3'
@@ -35,7 +36,6 @@ gem 'roo-xls', '~> 1.0'
 gem 'pg'
 gem 'therubyracer'
 gem 'unicorn'
-
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -56,7 +56,6 @@ group :development, :test do
   gem 'capistrano-rvm'
   gem 'capistrano-rails'
   gem 'capistrano-bundler'
-  gem 'capistrano3-puma'
   gem 'capistrano3-unicorn'  
 end
 
