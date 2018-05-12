@@ -17,4 +17,5 @@
 /tmp
 
 public/uploads
+public/assets
 .envrc
