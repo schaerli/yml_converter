@@ -14,7 +14,7 @@ source 'https://rails-assets.org' do
 end
 # See https://github.com/rails/execjs#readme for more supported runtimes
 gem 'therubyracer', platforms: :ruby
-gem 'libv8'
+gem 'libv8', '=3.16.14.19'
 gem 'execjs'
 
 # Use jquery as the JavaScript library
