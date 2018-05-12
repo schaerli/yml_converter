@@ -160,7 +160,7 @@ background-repeat: no-repeat;
 }
 
 #workwrap {	
-	background: url(../img/work.jpg) no-repeat center top;
+	background-image: url(image_path("work.jpg")) no-repeat center top;
 	margin-top: -70px;
 	padding-top: 250px;
 	text-align:center;
@@ -195,7 +195,7 @@ background-repeat: no-repeat;
 }
 
 #aboutwrap {	
-	background: url(../img/about.jpg) no-repeat center top;
+	background-image: url(image_path("about.jpg")) no-repeat center top;
 	margin-top: -70px;
 	padding-top: 250px;
 	text-align:center;
