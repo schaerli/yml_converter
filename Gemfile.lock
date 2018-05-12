@@ -278,6 +278,7 @@ DEPENDENCIES
   capistrano3-unicorn
   carrierwave
   coffee-rails (~> 4.2)
+  execjs
   font-awesome-rails (~> 4.4)
   jbuilder (~> 2.0)
   jquery-rails
