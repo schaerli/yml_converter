@@ -1,0 +1,15 @@
+development:
+  adapter: postgresql
+  database: <%= ENV['DATABASE_NAME_DEVELOPMENT'] %>
+  host:     <%= ENV['DATABASE_HOST'] %>
+  encoding: utf8
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+
+production:
+  adapter: postgresql
+  database: <%= ENV['DATABASE_NAME_PRODUCTION'] %>
+  host:     <%= ENV['DATABASE_HOST'] %>
+  encoding: utf8
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>

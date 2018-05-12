@@ -16,9 +16,5 @@
 !/log/.keep
 /tmp
 
-# Ignore the database.yml
-/config/database.yml
-/config/database.yml.example
-
 public/uploads
 .envrc
