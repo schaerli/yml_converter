@@ -23,7 +23,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'slim'
 gem 'slim-rails'
-gem 'sassc'
 gem 'json'
 gem 'carrierwave'
 gem 'font-awesome-rails', '~> 4.4'
