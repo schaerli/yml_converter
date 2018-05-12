@@ -26,7 +26,7 @@ $(function() {
       return {"order_id":  $("#hidden_data_yml").data("orderid"), "count_files": $("#input-700").fileinput('getFileStack').length, "type": $("#hidden_data_yml").data("type"), "targettype": $("#hidden_data_yml").data("targettype")}
     }
       
-  })
+  });
 
 
   $("#input-700").on('filebatchuploadcomplete', function(event, files, extra) {
@@ -36,4 +36,4 @@ $(function() {
       console.log('File batch upload success');
   });
  
-})
+});
