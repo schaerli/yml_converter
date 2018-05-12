@@ -42,9 +42,14 @@ GEM
     airbrussh (1.1.1)
       sshkit (>= 1.6.1, != 1.7.0)
     arel (7.1.4)
+    autoprefixer-rails (8.4.1)
+      execjs
     awesome_print (1.7.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass (3.3.7)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     builder (3.2.3)
     byebug (9.0.6)
     capistrano (3.6.1)
@@ -79,7 +84,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.10.0)
-    commonjs (0.2.7)
     concurrent-ruby (1.0.5)
     debug_inspector (0.0.2)
     erubis (2.7.0)
@@ -106,14 +110,6 @@ GEM
       httparty
     json (1.8.6)
     kgio (2.10.0)
-    less (2.6.0)
-      commonjs (~> 0.2.7)
-    less-rails (2.7.1)
-      actionpack (>= 4.0)
-      less (~> 2.6.0)
-      sprockets (> 2, < 4)
-      tilt
-    libv8 (3.16.14.19)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -186,7 +182,6 @@ GEM
       ffi (>= 0.5.0)
     rdoc (4.2.2)
       json (~> 1.4)
-    ref (2.0.0)
     roo (2.5.1)
       nokogiri (~> 1)
       rubyzip (~> 1.1, < 2.0.0)
@@ -237,18 +232,10 @@ GEM
       roo (>= 1.11.2)
       spreadsheet (>= 0.8.5)
     temple (0.7.7)
-    therubyracer (0.12.3)
-      libv8 (~> 3.16.14.15)
-      ref
     thor (0.19.4)
     thread_safe (0.3.6)
     tilt (2.0.5)
     ttfunk (1.4.0)
-    twitter-bootstrap-rails (3.2.2)
-      actionpack (>= 3.1)
-      execjs (>= 2.2.2, >= 2.2)
-      less-rails (>= 2.5.0)
-      railties (>= 3.1)
     tzinfo (1.2.3)
       thread_safe (~> 0.1)
     uglifier (3.2.0)
@@ -270,6 +257,7 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
+  bootstrap-sass (~> 3.3.7)
   byebug
   capistrano
   capistrano-bundler
@@ -285,8 +273,6 @@ DEPENDENCIES
   jquery-ui-rails
   jquery-ui-themes
   json
-  less-rails
-  libv8 (= 3.16.14.19)
   listen (~> 3.0.5)
   pg
   pry
@@ -301,8 +287,6 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   tabledata (~> 0.0.3)
-  therubyracer
-  twitter-bootstrap-rails
   uglifier
   unicorn
   web-console (~> 2.0)

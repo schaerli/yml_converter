@@ -7,15 +7,11 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
-gem "less-rails"
+gem 'bootstrap-sass', '~> 3.3.7'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap-fileinput'
 end
-# See https://github.com/rails/execjs#readme for more supported runtimes
-gem 'therubyracer', platforms: :ruby
-gem 'libv8', '=3.16.14.19'
-gem 'execjs'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -27,7 +23,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'slim'
 gem 'slim-rails'
-gem "twitter-bootstrap-rails"
 gem 'json'
 gem 'carrierwave'
 gem 'font-awesome-rails', '~> 4.4'
@@ -35,6 +30,7 @@ gem 'tabledata', '~> 0.0.3'
 gem 'roo-xls', '~> 1.0'
 gem 'pg'
 gem 'unicorn'
+gem 'execjs'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
