@@ -285,6 +285,7 @@ DEPENDENCIES
   jquery-ui-themes
   json
   less-rails
+  libv8
   listen (~> 3.0.5)
   pg
   pry
