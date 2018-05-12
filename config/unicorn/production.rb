@@ -1,5 +1,5 @@
 #listen "172.18.0.112:2529"  # listen to port 3000 on the loopback interface
-listen "127.0.0.1:3002"  # listen to port 3000 on the loopback interface
+listen 3002  # listen to port 3000 on the loopback interface
 
 working_directory "/yml_converter"
 
