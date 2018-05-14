@@ -5,7 +5,8 @@ variables:
   DOCKER_HOST: "tcp://elu.noip.me:5005"
 
 services:
-  - docker:dind
+  - name: docker:dind
+    command: ["--insecure-registry=elu.noip.me:5005"]
 
 stages:
   - build
