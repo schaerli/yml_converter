@@ -2,6 +2,7 @@ image: docker:latest
 
 variables:
   DOCKER_OPTS: "--insecure-registry=elu.noip.me:5005"
+  DOCKER_HOST: "tcp://elu.noip.me:5005"
 
 services:
   - docker:dind
