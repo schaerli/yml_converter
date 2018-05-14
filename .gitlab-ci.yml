@@ -1,0 +1,21 @@
+image: docker:latest
+
+services:
+  - docker:dind
+
+stages:
+  - build
+
+variables:
+  CONTAINER_TEST_IMAGE: elu.noip.me:5005/dani/yml_converter:$CI_BUILD_REF_NAME_test
+
+before_script:
+  - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN elu.noip.me:5005
+
+build:
+  stage: build
+  script:
+    - docker build --pull -t $CONTAINER_TEST_IMAGE .
+    - docker push $CONTAINER_TEST_IMAGE
+
+
