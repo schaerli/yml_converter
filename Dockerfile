@@ -1,6 +1,8 @@
 ARG foo
 FROM ruby:2.5-alpine
 
+RUN echo "test variable $foo"
+
 # Build deps
 RUN apk add --no-cache --update --virtual build-deps \
         build-base \
