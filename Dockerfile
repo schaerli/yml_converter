@@ -1,3 +1,4 @@
+ARG foo
 FROM ruby:2.5-alpine
 
 # Build deps
