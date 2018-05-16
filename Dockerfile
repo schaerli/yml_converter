@@ -1,7 +1,7 @@
 FROM ruby:2.5-alpine
 
-ARG foo
-RUN echo "test variable $foo"
+ARG token
+RUN echo "test variable ${token}"
 
 # Build deps
 RUN apk add --no-cache --update --virtual build-deps \
@@ -41,7 +41,7 @@ ENV APP_PATH /yml_converter
 ENV RAILS_ENV "production"
 
 # RUN git clone ssh://gitlab-ci-token:${CI_JOB_TOKEN}@elu.noip.me:2022/dani/yml_converter.git $APP_PATH
-RUN git clone http://gitlab-ci-token:${foo}@git.elu.noip.me/dani/yml_converter.git $APP_PATH
+RUN git clone http://gitlab-ci-token:${token}@git.elu.noip.me/dani/yml_converter.git $APP_PATH
 
 #RUN unset CI
 #RUN unset DB
