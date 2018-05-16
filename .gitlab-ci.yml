@@ -12,7 +12,7 @@ stages:
   - build
 
 variables:
-  CONTAINER_TEST_IMAGE: yml_converter
+  CONTAINER_TEST_IMAGE: elu.noip.me:5005/dani/yml_converter
 
 before_script:
   - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN elu.noip.me:5005
