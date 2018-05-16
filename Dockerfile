@@ -1,6 +1,6 @@
-ARG foo
 FROM ruby:2.5-alpine
 
+ARG foo
 RUN echo "test variable $foo"
 
 # Build deps
