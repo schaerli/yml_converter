@@ -41,7 +41,9 @@ ENV APP_PATH /yml_converter
 ENV RAILS_ENV "production"
 
 # RUN git clone ssh://gitlab-ci-token:${CI_JOB_TOKEN}@elu.noip.me:2022/dani/yml_converter.git $APP_PATH
-RUN git clone http://gitlab-ci-token:${token}@git.elu.noip.me/dani/yml_converter.git $APP_PATH
+#RUN git clone http://gitlab-ci-token:${token}@git.elu.noip.me/dani/yml_converter.git $APP_PATH
+RUN mkdir $APP_PATH
+COPY . $APP_PATH
 
 #RUN unset CI
 #RUN unset DB
