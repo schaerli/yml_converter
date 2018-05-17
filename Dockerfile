@@ -59,6 +59,6 @@ RUN ln -sf /dev/stdout $APP_PATH/log/production.log
 
 #COPY docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod +x docker-entrypoint.sh
-CMD ["${APP_PATH}/docker-entrypoint.sh"]
+CMD ["/yml_converter/docker-entrypoint.sh"]
 
 RUN apk del build-deps
