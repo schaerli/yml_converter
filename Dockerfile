@@ -1,6 +1,6 @@
 FROM ruby:2.5-alpine
 
-ARG token
+#ARG token
 #RUN echo "test variable ${token}"
 
 # Build deps
@@ -17,8 +17,8 @@ RUN apk add --no-cache --update --virtual run-deps \
         nodejs \
         tzdata
 
-RUN mkdir -p ~/.ssh && \
-  echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+#RUN mkdir -p ~/.ssh && \
+#  echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
 
 # ADD id_rsa /root/.ssh/
 
