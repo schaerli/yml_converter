@@ -12,7 +12,7 @@ stages:
   - build
 
 variables:
-  CONTAINER_IMAGE: elu.noip.me:5005/dani/yml_converter
+  CONTAINER_IMAGE: elu.noip.me:5005/$CI_PROJECT_PATH
 
 before_script:
   - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN elu.noip.me:5005
@@ -20,8 +20,11 @@ before_script:
 build:
   stage: build
   script:
+    - docker pull $CONTAINER_IMAGE:latest || true
+    - docker build --build-arg token="$CI_BUILD_TOKEN" --cache-from $CONTAINER_IMAGE:latest --tag $CONTAINER_IMAGE:$CI_BUILD_REF --tag $CONTAINER_IMAGE:latest .
+    - docker push $CONTAINER_IMAGE:$CI_BUILD_REF
     #- docker build --build-arg token="$CI_BUILD_TOKEN" --pull -t $CONTAINER_IMAGE .
-    - docker build --pull -t $CONTAINER_IMAGE .
-    - docker push $CONTAINER_IMAGE
+    #- docker build --pull -t $CONTAINER_IMAGE .
+    - docker push $CONTAINER_IMAGE:latest
 
 
