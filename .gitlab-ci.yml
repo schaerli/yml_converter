@@ -22,7 +22,7 @@ build:
   stage: build
   script:
     - docker pull $CONTAINER_IMAGE:latest || true
-    - docker build --build-arg token="$CI_BUILD_TOKEN" --cache-from $CONTAINER_IMAGE:latest --tag $CONTAINER_IMAGE:$CI_BUILD_REF --tag $CONTAINER_IMAGE:latest .
+    - docker build --build-arg token="$CI_BUILD_TOKEN" --tag $CONTAINER_IMAGE:$CI_BUILD_REF --tag $CONTAINER_IMAGE:latest .
     - docker push $CONTAINER_IMAGE:$CI_BUILD_REF
     #- docker build --build-arg token="$CI_BUILD_TOKEN" --pull -t $CONTAINER_IMAGE .
     #- docker build --pull -t $CONTAINER_IMAGE .
